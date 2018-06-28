@@ -1,0 +1,574 @@
+/* COLOUR REFERENCES
+   
+   Green:     #79b044
+   Salmon:    #dd5638
+   Blue Gray: #3e4249
+
+   */
+
+
+/* === GENERAL === */
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+
+/* @media (min-width: 576px) {} */
+
+
+/* Medium devices (tablets, 768px and up) */
+
+
+/* @media (min-width: 768px) {} */
+
+
+/* Large devices (desktops, 992px and up) */
+
+
+/* @media (min-width: 992px) {} */
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+
+/* @media (min-width: 1200px) {} */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    /* margin-top: 70px; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background: url('../img/title.jpg') top left repeat;
+}
+
+
+/* === GLOBAL === */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 2.9em;
+}
+
+h1,
+h2 {
+    margin: 0 0 40px;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+button,
+input,
+.btn,
+a.btn {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: white;
+}
+
+.btn {
+    font-weight: bold;
+    white-space: normal;
+    /* overflow-wrap: break-word; */
+}
+
+.btn-danger {
+    background-color: #dd5638;
+    border-color: #d95131;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    border-width: 0px;
+}
+
+.modal-content {
+    background: url('../img/tile.jpg') top left repeat;
+}
+
+.badge.social {
+    background: #ccc;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 42px;
+    margin: 0 5px 20px 0;
+    padding: 0;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50%;
+    border-radius: 50px;
+    color: white;
+}
+
+.badge.social.twitter:hover {
+    background: #55acee;
+}
+
+.badge.social.facebook:hover {
+    background: #3b5998;
+}
+
+.badge.social.gplus:hover {
+    background: #db4b39;
+}
+
+
+/* === NAVBAR
+    ===================================== === */
+
+.navbar-custom {
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+}
+
+
+/* Remove padding on Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .navbar-custom .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* change the brand and text color */
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    margin-right: 0;
+    margin-left: 0;
+    color: white;
+    text-shadow: 0 0 4px #E0E0E0;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.navbar-custom img {
+    padding: 0 0.9375rem 0 0.625rem;
+    height: 100%;
+}
+
+.navbar-custom .navbar-text:hover {
+    color: rgb(163, 150, 233);
+}
+
+
+/* change the link color */
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/* change the color of active or hovered links */
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: white;
+}
+
+.navbar-custom li {
+    list-style: none;
+    padding-left: 1.25rem;
+}
+
+.navbar-custom li a {
+    text-decoration: none;
+    padding: 0.625rem;
+    position: relative;
+}
+
+.navbar-custom li a:before {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: scale(1, 0);
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+}
+
+.navbar-custom li a::after {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: scale(0, 1);
+    -webkit-transform: scale(0, 1);
+    -moz-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    -o-transform: scale(0, 1);
+}
+
+.navbar-custom li a:before,
+.navbar-custom li a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: opacity 0.35 ease, transform 0.35s ease;
+    -webkit-transition: opacity 0.35 ease, transform 0.35s ease;
+    -moz-transition: opacity 0.35 ease, transform 0.35s ease;
+    -ms-transition: opacity 0.35 ease, transform 0.35s ease;
+    -o-transition: opacity 0.35 ease, transform 0.35s ease;
+}
+
+.navbar-custom li a:hover:before,
+.navbar-custom li a:hover:after {
+    transition: 0.35s;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+
+/* Solid class attached on scroll past first section */
+
+.navbar-custom.solid {
+    background-color: rgba(64, 64, 64, 1);
+    transition: background-color 0.5s ease 0s;
+    box-shadow: 2px 2px 6px rgb(40, 40, 40);
+    -webkit-transition: background-color 0.5s ease 0s;
+    -moz-transition: background-color 0.5s ease 0s;
+    -ms-transition: background-color 0.5s ease 0s;
+    -o-transition: background-color 0.5s ease 0s;
+}
+
+
+/* responsive css when collapse */
+
+@media (max-width: 992px) {
+    .navbar-custom .nav-item {
+        text-align: center;
+    }
+    .navbar-custom li {
+        padding-left: 0;
+    }
+    .navbar-custom .navbar-collapse {
+        background: linear-gradient(90deg, rgba(32, 32, 32, 0), rgba(64, 64, 64, 1) 50%, rgba(32, 32, 32, 0));
+        height: 100%;
+        /* rgba(51, 51, 51, 0.8); */
+    }
+}
+
+
+/* === HERO
+     ============================ */
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, .8) 2%, rgba(0, 0, 0, 0)), url('../img/bg-image.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+}
+
+
+/* Smartphone Portrait Logo appear*/
+
+#hero img {
+    margin-top: 15vh;
+}
+
+#hero .mobileShow {
+    display: inline;
+}
+
+
+/* Smartphone Portrait Logo Disappear*/
+
+@media (min-width: 576px) {
+    #hero .mobileShow {
+        display: none;
+    }
+}
+
+#hero .hero-text h1 {
+    font-weight: 570;
+    text-shadow: 0 0 4px #F5F5F5;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+    #hero .hero-text {
+        position: absolute;
+        top: 40%;
+    }
+    #hero h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    #hero .hero-text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+    #hero h1 {
+        font-size: 5rem;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    #hero h1 {
+        font-size: 5rem;
+    }
+}
+
+
+/* === PUZZLE YOUR BAG
+    ================================ */
+
+
+/* #puzzle-bag .container-fluid {
+    height: 80vh;
+} */
+
+.card-header {
+    height: 4rem;
+}
+
+.color1 {
+    background-color: #5cb85c;
+}
+
+.color2 {
+    background-color: #499349;
+}
+
+.color3 {
+    background-color: #376e37;
+}
+
+@media (min-width: 992px) {
+    .card-header {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card:nth-child(n+2) {
+        margin-top: 2.25rem;
+    }
+    .card-header {
+        font-size: 1.25rem;
+        height: auto;
+    }
+}
+
+.card-img-bottom {
+    width: 50%;
+    align-self: center;
+    margin-top: 0.875rem;
+    margin-bottom: 5rem;
+    ;
+}
+
+
+/* #puzzle-bag {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    #puzzle-bag .container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    } */
+
+
+/* #puzzle-bag .bag-parts img {
+        margin: 5rem;
+    } */
+
+
+/* #puzzle-bag .img-container img {
+        margin-top: 8rem;
+        padding: 0;
+    }
+} */
+
+
+/* === LAYOUT === */
+
+
+/* section {
+    padding: 80px 0;
+} */
+
+.section-header {
+    text-align: center;
+}
+
+section h2 {
+    margin: 3.75rem 0 2rem;
+}
+
+section h3 {
+    margin: 1.875rem 0 0.625rem;
+}
+
+#optin {
+    background: rgba(64, 64, 64, 1);
+    padding: 1rem 0;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#optin p {
+    margin: 0.3125rem 0;
+}
+
+#who-benefits {
+    background: white;
+}
+
+#course-features {
+    background: #3e4249;
+    color: white;
+    text-align: center;
+}
+
+#project-features {
+    text-align: center;
+}
+
+#featurette {
+    background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+#instructor {
+    background: white url('../img/randy.png') 95% 10px no-repeat;
+    background-size: contain;
+}
+
+#instructor h2 {
+    margin: 0 0 20px;
+}
+
+#instructor small {
+    font-size: small;
+}
+
+#instructor .num {
+    display: table;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    line-height: 24px;
+    height: 110px;
+    width: 110px;
+    text-align: center;
+    background: #dd5638;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+#instructor .num .num-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#instructor .num span {
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+/* === CUSTOM ICON SPRITES === */
+
+i.ci {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url('../img/icon-sprite.png') no-repeat;
+}
+
+.ci.ci-computer {
+    background-position: 0 0;
+}
+
+.ci.ci-watch {
+    background-position: -40px 0;
+}
+
+.ci.ci-calendar {
+    background-position: -80px 0;
+}
+
+.ci.ci-community {
+    background-position: -120px 0;
+}
+
+.ci.ci-instructor {
+    background-position: -160px 0;
+}
+
+.ci.ci-device {
+    background-position: -200px 0;
+}
